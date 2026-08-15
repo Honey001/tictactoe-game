@@ -221,7 +221,7 @@
 }
 .restart-text,
 .round-tied-text {
-	font-size: var(--FS-600);
+	font-size: clamp(var(--FS-400), 4vw, var(--FS-600));
 	text-transform: uppercase;
 	color: var(--slate-300);
 	letter-spacing: 1.5px;
