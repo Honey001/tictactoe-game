@@ -103,6 +103,11 @@
 	.aside-comment-container {
 		border-radius: var(--radius-16);
 	}
+	.winner-comment-container,
+	.restart-comment-container,
+	.round-tied-comment-container {
+		padding: 3rem;
+	}
 	.winner-comment {
 		font-size: var(--FS-300);
 	}
@@ -112,7 +117,7 @@
 		height: 4rem;
 	}
 	.round-text {
-		font-size: var(--FS-850);
+		font-size: clamp(var(--FS-600), 5vw, var(--FS-850));
 	}
 	.nxt-btn,
 	.restart-btn-container {
@@ -228,6 +233,11 @@
 	.aside-comment-container {
 		border-radius: var(--radius-16);
 	}
+	.winner-comment-container,
+	.restart-comment-container,
+	.round-tied-comment-container {
+		padding: 3rem;
+	}
 	.winner-comment {
 		font-size: var(--FS-300);
 	}
@@ -237,9 +247,9 @@
 		height: 4rem;
 	}
 	.round-text {
-		font-size: var(--FS-850);
+		font-size: clamp(var(--FS-600), 5vw, var(--FS-850));
 	}
-	.resart-text,
+	.restart-text,
 	.round-tied-text {
 		font-size: var(--FS-850);
 		letter-spacing: 5px;

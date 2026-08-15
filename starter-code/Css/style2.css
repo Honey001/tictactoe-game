@@ -181,7 +181,7 @@
 	display: none;
 	flex-direction: column;
 	justify-content: center;
-	padding: 3rem;
+	padding: var(--space-32);
 	gap: 1rem;
 	align-items: center;
 }
@@ -191,13 +191,15 @@
 	display: none;
 	flex-direction: column;
 	justify-content: center;
-	padding: 3rem;
+	padding: var(--space-32);
 	gap: 1rem;
 	align-items: center;
 }
 .aside-comment-container {
 	position: fixed;
-	top: 30vh;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
 	width: 100%;
 	background-color: var(--slate-800);
 }
@@ -213,11 +215,11 @@
 	height: 2rem;
 }
 .round-text {
-	font-size: var(--FS-600);
+	font-size: clamp(var(--FS-400), 4vw, var(--FS-600));
 	text-transform: uppercase;
 	color: var(--teal-400);
 }
-.resart-text,
+.restart-text,
 .round-tied-text {
 	font-size: var(--FS-600);
 	text-transform: uppercase;
