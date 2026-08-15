@@ -1,0 +1,148 @@
+@import url("./reset.css");
+@import url("./variables.css");
+
+
+/* Desktop - New Game Menu */
+body {
+	background: var(--slate-900);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+	font-family: var(--FF);
+}
+/* New Game Menu */
+
+/* Auto layout */
+.new-game-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-32);
+	justify-content: center;
+	font-family: var(--FF);
+}
+/* Player Mark Container */
+
+/* Auto layout */
+.player-opinion-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: var(--padding-24);
+	width: 20.438rem;
+	height: 13rem;
+	background: var(--slate-800);
+	box-shadow: inset 0px -8px 0px #10212a;
+	border-radius: var(--radius-16);
+}
+
+.inner-player-opinion-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: var(--space-16);
+}
+
+.player-opinion-btn-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 17.5rem;
+	height: 4.5rem;
+	background: var(--slate-900);
+	border-radius: var(--radius-10);
+}
+
+/* Mark Options */
+
+/* Auto layout */
+.inner-player-opinion-btn-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: stretch;
+	padding: 0rem;
+	width: 16.498rem;
+	height: 3.375rem;
+}
+
+.inner-player-opinion-btn-container .X-button,
+.inner-player-opinion-btn-container .O-button {
+	flex: 1;
+}
+
+/* X Mark & O Mark Option */
+.X-button,
+.O-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--radius-10);
+	color: var(--slate-300);
+	transition: all 0.3s ease-in-out;
+}
+
+.X-button.is-selected,
+.O-button.is-selected {
+	background-color: var(--slate-300);
+	color: var(--slate-900);
+}
+
+.player-opinion-text {
+	font-size: var(--FS-300);
+	font-weight: var(--FW-BOLD);
+	color: var(--slate-300);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.player-opinion-rule-text {
+	font-size: var(--FS-250);
+	font-weight: var(--FW-REGULAR);
+	color: var(--slate-300);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 130%;
+}
+/* Game section layout */
+.new-game-selection-option-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--space-16);
+	flex-direction: column;
+	width: 100%;
+}
+.new-game-selection-option-container button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: var(--padding-20) 0;
+	width: 100%;
+	background-color: var(--bg-color);
+	border-radius: var(--radius-16);
+	height: 3.5rem;
+	box-shadow: inset 0px -8px 0px var(--shadow-color);
+}
+.new-game-selection-option-container button[data-item-type="accent-1"] {
+	--bg-color: #f2b137;
+	--shadow-color: #cc8b13;
+}
+
+/* New Game CPU */
+
+.new-game-selection-option-container button[data-item-type="accent-2"] {
+	--bg-color: #31c3bd;
+	--shadow-color: #118c87;
+}
+.new-game-selection-option-text {
+	color: var(--slate-900);
+	font-weight: var(--FW-BOLD);
+	font-size: var(--FS-300);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}

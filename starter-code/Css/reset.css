@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* || RESET */
+*,
+::before,
+::after {
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+button {
+	font: inherit;
+	border: 0;
+	cursor: pointer;
+	background: inherit;
+}
+.player-name,
+.number-of-game-won {
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}

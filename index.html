@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./starter-code/assets/favicon-32x32.png" />
+		<link
+			rel="stylesheet"
+			href="./starter-code/Css/style.css" />
+		<link
+			rel="stylesheet"
+			href="./starter-code/Css/media-queries.css" />
+		<script
+			type="module"
+			src="./starter-code/Js/page1.js"
+			defer></script>
+
+		<title>Frontend Mentor | Tic Tac Toe</title>
+	</head>
+	<body>
+		<main class="new-game-container">
+			<section class="new-game-logo-container">
+				<img
+					src="../starter-code/assets/logo.svg"
+					alt="new-game-logo" />
+			</section>
+
+			<!-- New game menu start -->
+			<section class="player-opinion-container">
+				<article class="inner-player-opinion-container">
+					<p class="player-opinion-text">Pick player 1's mark</p>
+
+					<section class="player-opinion-btn-container">
+						<section class="inner-player-opinion-btn-container">
+							<button
+								type="button"
+								aria-hidden="true"
+								class="X-button">
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 32 32"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M24.571 0.443115C25.1617 -0.147627 26.1199 -0.147631 26.7106 0.443115L31.5573 5.28979C32.1478 5.88056 32.148 6.83877 31.5573 7.42944L22.986 15.9998L31.5573 24.571C32.1478 25.1618 32.148 26.12 31.5573 26.7107L26.7106 31.5574C26.12 32.148 25.1618 32.1479 24.571 31.5574L15.9997 22.9861L7.42939 31.5574C6.83871 32.148 5.8805 32.1479 5.28974 31.5574L0.44306 26.7107C-0.147686 26.1199 -0.147683 25.1618 0.44306 24.571L9.01337 15.9998L0.44306 7.42944C-0.147687 6.8387 -0.147684 5.88054 0.44306 5.28979L5.28974 0.443115C5.88049 -0.147629 6.83864 -0.147631 7.42939 0.443115L15.9997 9.01343L24.571 0.443115Z"
+										fill="currentColor" />
+								</svg>
+							</button>
+							<button class="O-button">
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 32 32"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.8701 0C24.635 0 31.7409 7.10525 31.7412 15.8701C31.7412 24.6352 24.6352 31.7412 15.8701 31.7412C7.10525 31.7409 0 24.635 0 15.8701C0.000261299 7.10541 7.10541 0.000261315 15.8701 0ZM15.8701 9.40527C12.2995 9.40553 9.40553 12.2995 9.40527 15.8701C9.40527 19.4409 12.2994 22.3357 15.8701 22.3359C19.4411 22.3359 22.3359 19.4411 22.3359 15.8701C22.3357 12.2994 19.4409 9.40527 15.8701 9.40527Z"
+										fill="currentColor" />
+								</svg>
+							</button>
+						</section>
+					</section>
+					<p class="player-opinion-rule-text">Remember: X goes first</p>
+				</article>
+			</section>
+
+			<section class="new-game-selection-option-container">
+				<button
+					type="button"
+					class="player-cpu-option"
+					data-item-type="accent-1"
+					data-mode="cpu">
+					<a
+						href="./starter-code/page2.htm"
+						class="new-game-selection-option-text"
+						>New Game (vs CPU)</a
+					>
+				</button>
+				<button
+					type="button"
+					data-item-type="accent-2"
+					data-mode="player">
+					<a
+						href="./starter-code/page2.htm"
+						class="new-game-selection-option-text">
+						New Game (vs player)</a
+					>
+				</button>
+			</section>
+			<!-- New game menu end -->
+		</main>
+	</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>tictactoe play</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./starter-code/assets/favicon-32x32.png" />
+		<link
+			rel="stylesheet"
+			href="./Css/style2.css?v=2" />
+		<link
+			rel="stylesheet"
+			href="./Css/media-queries.css?v=2" />
+		<script
+			type="module"
+			src="./Js/page2.js"
+			defer></script>
+	</head>
+	<body>
+		<main class="player-container">
+			<section class="logo-player-header">
+				<img
+					src="./assets/logo.svg"
+					alt="game-logo" />
+				<div class="next-player-icon-container">
+					<div class="inner-next-player-icon-container">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 20 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M15.3564 0.276855C15.7256 -0.0922463 16.3242 -0.0921859 16.6934 0.276855L19.7227 3.30615C20.0919 3.67535 20.0918 4.27384 19.7227 4.64307L14.3652 9.99951L19.7227 15.3569C20.0919 15.7261 20.0918 16.3246 19.7227 16.6938L16.6934 19.7231C16.3241 20.0923 15.7256 20.0923 15.3564 19.7231L9.99902 14.3657L4.64258 19.7231C4.27336 20.0923 3.67486 20.0923 3.30566 19.7231L0.276367 16.6938C-0.0926742 16.3246 -0.0927345 15.7261 0.276367 15.3569L5.63281 9.99951L0.276367 4.64307C-0.0926732 4.27386 -0.0927349 3.67532 0.276367 3.30615L3.30566 0.276855C3.67483 -0.0922466 4.27337 -0.0921849 4.64258 0.276855L9.99902 5.6333L15.3564 0.276855Z"
+								fill="#A8BFC9" />
+						</svg>
+						<p class="next-player-text">Turn</p>
+					</div>
+				</div>
+				<button
+					type="button"
+					class="reset-game-container">
+					<img
+						src="./assets/icon-restart.svg"
+						alt="restart-game" />
+				</button>
+			</section>
+
+			<section class="tictactoe-game-play-container">
+				<section class="tictactoe-players-container">
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+					<button
+						type="button"
+						class="tictactoe-player-box cell">
+						<img
+							src="./assets/icon-x.svg"
+							alt="icon-x" />
+					</button>
+				</section>
+				
+				<section class="game-records-container">
+					<div class="game-record">
+						<p class="player-name">
+							X <span class="player-text">(YOU)</span>
+						</p>
+						<span class="number-of-game-won">0</span>
+					</div>
+					<div class="game-record">
+						<p class="player-name">
+							TIES <span class="player-text">(YOU)</span>
+						</p>
+						<span class="number-of-game-won">0</span>
+					</div>
+					<div class="game-record">
+						<p class="player-name">
+							O <span class="player-text">(YOU)</span>
+						</p>
+						<span class="number-of-game-won">0</span>
+					</div>
+				</section>
+			</section>
+			
+			<aside class="winner-container">
+				<section class="aside-comment-container">
+					<section class="winner-comment-container">
+						<p class="winner-comment">you won!</p>
+						<div class="round-container">
+							<img
+								src="./assets/icon-x.svg"
+								alt="winner-icon-x" />
+							<h3 class="round-text">takes the round</h3>
+						</div>
+						<div class="winner-options-btn-container">
+							<button
+								type="button"
+								class="quit-btn">
+								quit
+							</button>
+							<button
+								type="button"
+								class="nxt-btn">
+								next round
+							</button>
+						</div>
+					</section>
+					<section class="restart-comment-container">
+						<h3 class="resart-text">resart game?</h3>
+						<div class="quit-options-btn-container">
+							<button
+								type="button"
+								class="quit-btn-container">
+								no, cancel
+							</button>
+							<button
+								type="button"
+								class="restart-btn-container">
+								yes, restart
+							</button>
+						</div>
+					</section>
+
+					<section class="round-tied-comment-container">
+						<h3 class="round-tied-text">round tied</h3>
+						<div class="quit-options-btn-container">
+							<button
+								type="button"
+								class="quit-btn-container">
+								quit
+							</button>
+							<button
+								type="button"
+								class="restart-btn-container">
+								next round
+							</button>
+						</div>
+					</section>
+				</section>
+			</aside>
+		</main>
+	</body>
+</html>
