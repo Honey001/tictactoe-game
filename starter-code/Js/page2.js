@@ -1,6 +1,5 @@
 const STORAGE_KEY = "tic-tac-toe-selection";
 const CPU_DELAY = 400;
-const CPU_BLOCK_CHANCE = 0.5;
 
 const ICONS = {
 	X: {
@@ -189,10 +188,15 @@ function clearBoard() {
 	document.querySelector(".winner-comment-container").style.display = "none";
 	document.querySelector(".round-tied-comment-container").style.display =
 		"none";
-	state.currentMark = state.selection.mark;
-	state.isPlayerTurn = true;
 	state.gameOver = false;
+
+	state.currentMark = "X";
+	state.isPlayerTurn = state.selection.mode !== "cpu" || state.selection.mark === "X";
 	updateTurnIndicator();
+
+	if (!state.isPlayerTurn) {
+		scheduleCpuMove();
+	}
 }
 
 function showPreview(cell) {
@@ -232,26 +236,30 @@ function getEmptyIndexes(board) {
 	return board.map((mark, index) => (mark ? -1 : index)).filter((i) => i >= 0);
 }
 
-function getBestMove() {
+function getBestMove(isLowBlockRound) {
 	const board = cells.map((cell) => cell.dataset.mark || null);
 	const cpuMark = state.currentMark;
 	const playerMark = getOppositeMark(cpuMark);
 
 	const winningMove = getWinningMove(board, cpuMark);
-
 	if (winningMove !== null) {
 		return winningMove;
 	}
 
-	const blockingMove = getWinningMove(board, playerMark);
-
-	if (blockingMove !== null && Math.random() < CPU_BLOCK_CHANCE) {
-		return blockingMove;
+	if (!isLowBlockRound || Math.random() < 0.4) {
+		const blockingMove = getWinningMove(board, playerMark);
+		if (blockingMove !== null) {
+			return blockingMove;
+		}
 	}
 
-	const emptyIndexes = getEmptyIndexes(board);
+	const strategic = [0, 2, 4, 6, 8].filter((i) => board[i] === null);
+	if (strategic.length > 0) {
+		return strategic[Math.floor(Math.random() * strategic.length)];
+	}
 
-	return emptyIndexes[Math.floor(Math.random() * emptyIndexes.length)];
+	const available = getEmptyIndexes(board);
+	return available[Math.floor(Math.random() * available.length)];
 }
 
 function cpuMove() {
@@ -262,7 +270,11 @@ function cpuMove() {
 		return;
 	}
 
-	placeMark(cells[getBestMove()], state.currentMark);
+	const totalRounds = state.scores.X + state.scores.O + state.scores.ties;
+	const isLowBlockRound = totalRounds % 2 === 1;
+	const moveIndex = getBestMove(isLowBlockRound);
+
+	placeMark(cells[moveIndex], state.currentMark);
 
 	if (checkGameEnd()) {
 		return;
@@ -346,11 +358,6 @@ function initPage2() {
 		cell.addEventListener("click", onCellClick);
 	});
 
-	if (state.selection.mode === "cpu" && state.selection.mark === "O") {
-		state.currentMark = getOppositeMark(state.currentMark);
-		updateTurnIndicator();
-		scheduleCpuMove();
-	}
 }
 
 document.addEventListener("DOMContentLoaded", initPage2);
